@@ -39,8 +39,9 @@ Convert a relative URL into an absolute one to break up both the relative and ba
 
 URLs are designed to be:
 
-  1. *portable*: URLs are permitted to contain only characters from a relatively small, universally safe alphabet
+  1. *portable*: URLs are permitted to contain only characters from a relatively small, universally safe alphabet.
 	2. *readable*: invisible, nonpriting characters also are prohibited in URLs.
   3. *complete*: an esacpe mechanism was added, allowing unsafe characters to be encoded into safe characters for transport.
 
+### The URL character set
 
