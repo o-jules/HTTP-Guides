@@ -45,3 +45,9 @@ URLs are designed to be:
 
 ### The URL character set
 
+The basic character set of URLs is the US-ASCII character set (7-bit).
+
+### Encoding mechanisms
+
+Rules for unsafe characters: a percent sign (%) following by two hexadecimal digits that represent the ASCII code of the character.
+
