@@ -51,3 +51,34 @@ The basic character set of URLs is the US-ASCII character set (7-bit).
 
 Rules for unsafe characters: a percent sign (%) following by two hexadecimal digits that represent the ASCII code of the character.
 
+Examles:
+
+| Character | ASCII code | URL   |
+|-----------|------------|-------|
+| ~         | 126(0x7e)  | %7E   |
+| SPACE     | 32(0x20)   | %20   |
+| %         | 37(0x25)   | %25   |
+
+### Character restriction
+
+Characters that should be encoded in a URL before you use them for anything other than their reserved purposes.
+
+Reserved and restricted characters:
+
+| Character | Reservation/Restriction |
+| --------- | ----------------------- |
+| %         | Reserved as escape token for encoded characters |
+| /         | Reserved for delimiting splitting up path segments in the path component |
+| .         | Reserved in the path component |
+| ..        | Reserved in the path component |
+| #         | Reserved as the fragment delimiter |
+| ?         | Reserved as the query-string delimiter
+| ;         | Reserved as the params delimiter
+| :         | Reserved to delimit the scheme, user/password, and host/port components |
+| $ +       | Reserved |
+| @ & =     | Reserved because they have special meaning in the context of some schemes |
+| { } | \ ^ ~ [ ] ' | Restricted because of unsafe handling by various transport agents, such as gateways |
+| < > "     | Unsafe; should be encoded because these characters often have meaning outside the scope of the URL, such as delimiting the URL itself in a document (e.g., "http://www.joes-hardware.com") |
+| 0x00 - 0x1F, 0x7F | Restricted; characters within these hex ranges fall within the nonprintable section of the US-ASCII character
+set |
+| over 0x7F | Restricted; characters |
