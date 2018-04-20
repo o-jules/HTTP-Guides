@@ -82,6 +82,23 @@ Common HTTP methods:
 
 Not all servers methods implement all the seven of the methods. And servers may implement additional methods (**extension methods**).
 
+- Status codes
+
+Status code classes:
+
+| Overall range | Defined range | Category      |
+| ------------- | ------------- | ------------- |
+| 100-199       | 100-101       | Informational |
+| 200-299       | 200-206       | Successful    |
+| 300-399       | 300-305       | Redirection   |
+| 400-499       | 400-415       | Client error  |
+| 500-599       | 500-505       | Server error  |
+
 - Reason phrase
 
   A human-readable version of the numeric status code, consisting of all the text until the end-of-line sequence.
+  It provides a *textual explanation* of the status code.
+
+- Version numbers
+
+Version numbers appear in both request and response message start lines in the format `HTTP/x.y`.
