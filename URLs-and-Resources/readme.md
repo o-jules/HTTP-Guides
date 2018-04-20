@@ -79,6 +79,5 @@ Reserved and restricted characters:
 | @ & =     | Reserved because they have special meaning in the context of some schemes |
 | { } | \ ^ ~ [ ] ' | Restricted because of unsafe handling by various transport agents, such as gateways |
 | < > "     | Unsafe; should be encoded because these characters often have meaning outside the scope of the URL, such as delimiting the URL itself in a document (e.g., "http://www.joes-hardware.com") |
-| 0x00 - 0x1F, 0x7F | Restricted; characters within these hex ranges fall within the nonprintable section of the US-ASCII character
-set |
+| 0x00 - 0x1F, 0x7F | Restricted; characters within these hex ranges fall within the nonprintable section of the US-ASCII character set |
 | over 0x7F | Restricted; characters |
