@@ -21,7 +21,7 @@ message:
   start line: text
   headers: lines of text
   empty line: one empty line
-  body: optional; text or binary
+  entity body: optional; text or binary
 ```
 
 - Request message:
@@ -101,4 +101,4 @@ Status code classes:
 
 - Version numbers
 
-Version numbers appear in both request and response message start lines in the format `HTTP/x.y`.
+Version numbers appear in both request and response message start lines in the format `HTTP/{major}.{minor}`.
