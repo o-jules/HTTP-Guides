@@ -32,10 +32,22 @@ router.get('/', async (ctx, next) => {
 
 router.get('/script/:type', async (ctx, next) => {
 	await next();
-	const name = ctx.cookies.get('name', { signed: true });
-	ctx.response.header["content-type"] = "application/javascript";
-	// ctx.response.header['access-control-allow-origin'] = "*";
+	ctx.set("Content-Type", "application/javascript");
+	ctx.set('Access-Control-Allow-Origin', "*");
+	// what if '*' is set to 'localhost'?
 
+	const type = ctx.params.type;
+
+	switch(type) {
+		// cross origin
+		case "anonymous": {
+			break;
+		}
+		case "crossorigin": {
+			break;
+		}
+	}
+	const name = ctx.cookies.get('name', { signed: true });
 	if (name) {
 		ctx.body = await template("auth.js", { encoding: "utf-8" });
 	} else {
